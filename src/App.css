@@ -36,3 +36,24 @@
     transform: rotate(360deg);
   }
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Playfair+Display&display=swap');
+
+h1,h3,h5,h6,a {
+  font-family: "Playfair Display";
+}
+p,h4,h2 {
+  font-family: "Josefin Sans";
+}
+
+
+@media (max-width: 767px) {
+  .project-item {
+    height: 500px;
+  }
+}
+@media (min-width: 768px) {
+  .project-item {
+    height: 100vh;
+  }
+}
