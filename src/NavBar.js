@@ -27,7 +27,7 @@ function NavBar() {
     return <nav id="navbar" className={stickyHeader ? "sticky-header" : "not sticky"}>
         <div>
         <div>
-        <Link to="/" style={{color: "black", textDecoration: "none"}}>Marilia Bognandi portfolio</Link>
+        <Link to="/" style={{color: "black", textDecoration: "none"}}>MB portfolio</Link>
         </div>
         <div>
             <Link to="/" style={{padding: "0 0.5rem", color: "black", textDecoration: "none"}}>Home</Link>

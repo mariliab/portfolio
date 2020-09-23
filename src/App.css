@@ -59,7 +59,7 @@ p,h4,h2,a {
   position: fixed;
   width: 100%;
   background: rgb(251, 243, 240);
-  z-index: 10000;
+  z-index: 1;
 }
 
 .project-item .project-info {

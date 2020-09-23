@@ -136,6 +136,7 @@ function ProjectItem({project}) {
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
+                    zIndex: "1000"
                 },
                 width: "100%",
                 height: "100%",
