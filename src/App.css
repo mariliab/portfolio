@@ -146,10 +146,15 @@ p,h4,h2,a {
   min-height: 90%;
   width: 100%;
   padding-top: 5rem;
-  padding-bottom: 5rem;
 }
 .project-page .modal-subheading {
   font-size: 200%;
+}
+#nextProject {
+  text-align: right;
+  margin-top: 5rem;
+  background: rgb(247, 232, 225);
+  padding: 5rem 0;
 }
 
 /* FOOTER */

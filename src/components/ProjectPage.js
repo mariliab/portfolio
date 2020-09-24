@@ -6,9 +6,13 @@ import {
     useParams,
     Link,
   } from "react-router-dom";
+  import {useSpring, animated} from 'react-spring';
 
 function ProjectPage({projects}) {
     const params = useParams();
+    const props = useSpring({opacity: 1, marginTop: '0', from: {opacity: 0, marginTop: '-10rem'}})
+
+    const nextProject = +params.projectid + +1;
     let project;
     if(projects){
         project = projects.find(p => p.id === params.projectid);
@@ -17,7 +21,7 @@ function ProjectPage({projects}) {
         window.scrollTo(0, 0); 
       });
 
-return <div className="project-page">
+return <animated.div style={props}><div className="project-page">
         <div className="container">
         <h1 style={{margin: '0'}}>{project.title}</h1>
         <div>
@@ -31,7 +35,19 @@ return <div className="project-page">
         {project.link ? <div><h3>LINK</h3><a href={project.link}>{project.linktext}</a></div> : null}
     </div>
         </div>
-</div>
+        <div id="nextProject"><div className="container">
+            <Link to={`/projectpage/${nextProject}`} style={{
+                                color: "#2f2724", 
+                                boxShadow: "5px 5px 0 0 #edc7b6", 
+                                border: "1px solid", 
+                                borderRadius: "9999px", 
+                                padding: "1rem 2rem", 
+                                fontWeight: "bold", 
+                                textDecoration: "none"
+                            }} >Next project</Link>
+            </div>
+        </div>
+</div></animated.div>
 }
 
 export default ProjectPage

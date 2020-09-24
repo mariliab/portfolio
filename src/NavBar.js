@@ -7,7 +7,7 @@ import {
   } from "react-router-dom";
 
 function NavBar() {
-    const [y, setY] = useState(window.scrollY);
+    const [y, setY] = useState(0);
 
     const handleNavigation = useCallback(
         (e) => {
