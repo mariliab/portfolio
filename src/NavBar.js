@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import {
     BrowserRouter as Router,
     Switch,
@@ -7,24 +7,43 @@ import {
   } from "react-router-dom";
 
 function NavBar() {
-    const [isSticky, setIsSticky] = React.useState(false);
+    const [y, setY] = useState(window.scrollY);
 
-    function handleScroll() {
-        const header = document.getElementById("navbar");
-        if (window.pageYOffset > header.offsetHeight) {
-            setIsSticky(true);
-        } else {
-            setIsSticky(false);
-        }
-    }
-
-    const stickyHeader = Boolean(isSticky);
+    const handleNavigation = useCallback(
+        (e) => {
+          const window = e.currentTarget;
+          const body = document.body;
+          const header = document.querySelector("#navbar");
+          console.log("Header height: " + header.offsetHeight);
+          if (window.scrollY > header.offsetHeight) {
+            if (y > window.scrollY) {
+              if (body.classList.contains("scrollDown")) {
+                body.classList.remove("scrollDown");
+              }
+              body.classList.add("scrollUp");
+            } else if (y < window.scrollY) {
+              if (body.classList.contains("scrollUp")) {
+                body.classList.remove("scrollUp");
+              }
+              body.classList.add("scrollDown");
+            }
+          }
     
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-    });
+          setY(window.scrollY);
+        },
+        [y]
+      );
+    
+      useEffect(() => {
+        setY(window.scrollY);
+        window.addEventListener("scroll", (e) => handleNavigation(e));
+    
+        return () => {
+          window.removeEventListener("scroll", (e) => handleNavigation(e));
+        };
+      }, [handleNavigation]);
 
-    return <nav id="navbar" className={stickyHeader ? "sticky-header" : "not sticky"}>
+    return <header id="navbar"><nav className="NavContent">
         <div>
         <div>
         <Link to="/" style={{color: "black", textDecoration: "none"}}>MB portfolio</Link>
@@ -35,7 +54,7 @@ function NavBar() {
             <Link to="/About" style={{padding: "0 0.5rem", color: "black", textDecoration: "none"}}>About</Link>
         </div>
         </div>
-    </nav>
+    </nav></header>
 }
 
 export default NavBar
