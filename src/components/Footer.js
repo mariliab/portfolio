@@ -5,6 +5,7 @@ function Footer() {
         <a style={{ color: "#2f2724", padding: "1rem", textDecoration: "none", borderRadius: "9999px"}} href="mailto:marilia.bognandi@gmail.com" target="_blank">Email</a>
         <a style={{ color: "#2f2724", padding: "1rem", textDecoration: "none", borderRadius: "9999px"}} href="https://www.instagram.com/bognandiphotography/" target="_blank">Instagram</a>
         <a style={{ color: "#2f2724", padding: "1rem", textDecoration: "none", borderRadius: "9999px"}} href="https://www.linkedin.com/in/mariliabognandi/" target="_blank">LinkedIn</a>
+        <a style={{ color: "#2f2724", padding: "1rem", textDecoration: "none", borderRadius: "9999px"}} href="https://github.com/mariliab" target="_blank">Github</a>
         </h3><div style={{position: "absolute", fontSize: "90%",bottom: "1rem", left: "0", right: "0"}}><p>© 2020 Marilia Bognandi.</p> <br></br><p style={{fontStyle: "italic"}}>Built with React.js</p></div></div>
 }
 

@@ -1,9 +1,11 @@
 import logo from './logo.svg';
-import React from "react";
+import React, {useEffect} from "react";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
+  withRouter,
+  useLocation,
   Link
 } from "react-router-dom";
 import './App.css';
@@ -25,8 +27,6 @@ import SportlibImage from "./images/Sportlib-mockup.jpg"
 import PerpelloImage from "./images/Perpello-world-mockup.jpg"
 import JMImage from "./images/JMathome-mockup.jpg"
 import SCNImage from "./images/SCNNordic.jpeg"
-import { findByLabelText } from "@testing-library/react";
-
 
 const projects = [
   {   id: "1", 
@@ -43,9 +43,9 @@ const projects = [
   {
       id: "2", 
       title: "JM@home", 
-      categories: "Frontend development / UI Design", 
-      description: "UI redesign of JM@Home's exisitng platform.", 
-      longDescription: "JM@home is a daughter company of JM and in this project I was included in a small development team that managed the web. My role was to suggest and implement new webdesign of the platform.", 
+      categories: "Frontend development / UI design", 
+      description: "Maintenance development of JM@Home's exisitng platform.", 
+      longDescription: "JM@home is a daughter company of JM and in this project I was included in a small development team that managed the web. My role was to suggest and implement new webdesign of the platform and staircase screens.", 
       technologies: [
       "ASP .NET Core", "Html", "Razor", "Less", "Javascript", "Umbraco CMS", "Adobe XD"
       ], 
@@ -55,7 +55,7 @@ const projects = [
   },
   {   id: "3", 
       title: "Perpello", 
-      categories: "UI Design / Frontend development", 
+      categories: "Frontend development / UI design", 
       description: "Perpello is a company focued on e-commerce and wanted to produce value creating content via an engaging blog.", 
       longDescription: "My role has been to implement the new design of the website aswell as managing content such as updating and producing.", 
       technologies: [
@@ -69,7 +69,7 @@ const projects = [
       title: "Swedish Warmblood Association", 
       categories: "Frontend development / UX / UI Design", 
       description: "SWB is a cover system for horse breeding and wanted to digitalize their whole business by also updating the ux and making it easier to register new covers and foals.", 
-      longDescription: "SWB manages all breeding of the warmblood horse in Sweden via a digital platform. The project was to implement a complete make-over of the platforms architechture as well as design. My role was to suggest UX and UI as well as implementing it.", 
+      longDescription: "SWB manages all breeding of the warmblood horse in Sweden via a digital platform. The project was to implement a complete make-over of the platforms architechture as well as design. For this we used NopCommerce e-commerce platform with a suitable theme. My role was to suggest UX and UI as well as implementing it.", 
       technologies: [
           "ASP .NET Core", "Html", "Razor", "Less", "C#", "NopCommerce CMS", "Adobe XD"
       ], 
@@ -80,7 +80,7 @@ const projects = [
       title: "SCN Nordic", 
       categories: "Web development / Project management", 
       description: "Implementation of product web for SCN Nordic, supplier of components and systems for machine builders in the Nordic countries.", 
-      longDescription: "SCN wanted to digitalize their business as well as being more accessible for clients by implementing a mobile friendly ui. My role in this project has been to keep regular contact with the board, and well as manage the project team and implement the new product data model based on their requirements.", 
+      longDescription: "SCN wanted to digitalize their business and showcasing their products on a product web as well as having a mobile-friendly ui. In this project we used the e-commerce platform Litium with their out-of-the box storefront Litium Accelerator. My role has been to keep regular contact with the board and all project members, and well as manage the development team and customize the ui and implement the new product data model based on their requirements.", 
       technologies: [
       "ASP .NET Core", "Html", "Razor", "Less", "C#", "Litium CMS", "Litium Accelerator", "Adobe XD", "Photography"
   ], 
@@ -112,11 +112,20 @@ const projects = [
       image: SportlibImage
   }]
 
-Modal.setAppElement('body');
+function ScrollToTop() {
+    const { pathname } = useLocation();
+  
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [pathname]);
+  
+    return null;
+  }
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
     <div className="App">
       <Navbar/>
 

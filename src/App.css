@@ -157,6 +157,35 @@ p,h4,h2,a {
   padding: 5rem 0;
 }
 
+/* ABOUT PAGE */
+#about-page .about-info {
+  display: flex;
+}
+#about-page h1 {
+  text-align: center;
+}  
+@media (max-width: 991px) {
+  #about-page .about-info {
+    flex-wrap: wrap;
+  } 
+}
+@media (min-width: 992px) {
+  #about-page .about-info .profile-picture {
+    max-width: 33%;
+    padding-right: 1rem;
+  } 
+}
+
+#about-page .about-info .profile-picture img {
+  width: 100%;
+  border-radius: 100%;
+  overflow: hidden;
+} 
+#about-page .about-info p span.bold {
+  font-weight: bold;
+  background:rgb(247, 232, 225);
+} 
+
 /* FOOTER */
 #contact {
   text-align: center;
