@@ -12,14 +12,23 @@ function ProjectPage({projects}) {
     const params = useParams();
     const props = useSpring({opacity: 1, marginTop: '0', from: {opacity: 0, marginTop: '-10rem'}})
 
-    const nextProject = +params.projectid + +1;
     let project;
     if(projects){
         project = projects.find(p => p.id === params.projectid);
     }
     useEffect(() => {
         window.scrollTo(0, 0); 
-      });
+    });
+
+function getNextProject(){
+    let nextProject;
+    if (+params.projectid + 1 > projects.length) {
+        nextProject = +projects[0].id;
+    } else {
+        nextProject = +params.projectid + +1;
+    }
+    return nextProject;
+}
 
 return <animated.div style={props}><div className="project-page">
         <div className="container">
@@ -38,7 +47,7 @@ return <animated.div style={props}><div className="project-page">
     </div>
         </div>
         <div id="nextProject"><div className="container">
-            <Link to={`/projectpage/${nextProject}`} style={{
+            <Link to={`/projectpage/${getNextProject()}`} style={{
                                 color: "#2f2724", 
                                 boxShadow: "5px 5px 0 0 #edc7b6", 
                                 border: "1px solid", 
