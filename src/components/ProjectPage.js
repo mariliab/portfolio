@@ -31,7 +31,10 @@ function getNextProject(){
 }
 
 return <animated.div style={props}><div className="project-page">
-        <div className="container">
+    <div className="project-information-wrapper">
+    <div className="project-image" style={{backgroundImage: `url(${project.image})`, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat"}}></div>
+    <div className="project-information">
+    <div className="container">
         <h1 style={{margin: '0'}}>{project.title}</h1>
         {project.date ? <small><p>{project.date}</p></small> : null}
         <div>
@@ -46,6 +49,8 @@ return <animated.div style={props}><div className="project-page">
         {project.links? <div className="project-links"><h3>LINKS</h3>{project.links.map((l, index)  => <a href={l.link}>{l.linktext}</a> )}</div> : null}
     </div>
         </div>
+    </div>
+    </div>
         <div id="nextProject"><div className="container">
             <Link to={`/projectpage/${getNextProject()}`} style={{
                                 color: "#2f2724", 
