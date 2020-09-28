@@ -31,7 +31,8 @@ import SCNImage from "./images/SCNNordic.jpeg"
 
 const projects = [
   {   id: "1", 
-      title: "Onboarding", 
+      title: "Onboarding",
+      date: "April 2020 - ongoing", 
       categories: "Frontend development / UX / UI Design", 
       description: "A single-page application for HR people to simplify the process of onboarding new employees.",
       longDescription: "When hiring a new employee, there are lots of things that need to be done. From ordering computers to giving access to different systems. This project was intended as a tool for our HR to help with this process. My role has been to do User research, design and iterate the UI, implement the UI, user authentication and authorization, CI/CD, deployment etc.", 
@@ -46,7 +47,8 @@ const projects = [
   },
   {
       id: "2", 
-      title: "JM@home", 
+      title: "JM@home",
+      date: "August 2018 - December 2019", 
       categories: "Frontend development / UI design", 
       description: "Maintenance development of JM@Home's exisitng platform.", 
       longDescription: "JM@home is a daughter company of JM and in this project I was included in a small development team that managed the web. My role was to suggest and implement new webdesign of the platform and staircase screens.", 
@@ -60,7 +62,8 @@ const projects = [
         }]  
   },
   {   id: "3", 
-      title: "Perpello", 
+      title: "Perpello",
+      date: "January 2018 - April 2020",  
       categories: "Frontend development / UI design", 
       description: "Perpello is a company focued on e-commerce and wanted to produce value creating content via an engaging blog.", 
       longDescription: "My role has been to implement the new design of the website aswell as managing content such as updating and producing.", 
@@ -75,6 +78,7 @@ const projects = [
   },
   {   id: "4", 
       title: "Swedish Warmblood Association", 
+      date: "October 2019 - April 2020", 
       categories: "Frontend development / UX / UI Design", 
       description: "SWB is a cover system for horse breeding and wanted to digitalize their whole business by also updating the ux and making it easier to register new covers and foals.", 
       longDescription: "SWB manages all breeding of the warmblood horse in Sweden via a digital platform. The project was to implement a complete make-over of the platforms architechture as well as design. For this we used NopCommerce e-commerce platform with a suitable theme. My role was to suggest UX and UI as well as implementing it.", 
@@ -86,6 +90,7 @@ const projects = [
   {
       id: "5", 
       title: "SCN Nordic", 
+      date: "May 2019 - September 2019", 
       categories: "Web development / Project management", 
       description: "Implementation of product web for SCN Nordic, supplier of components and systems for machine builders in the Nordic countries.", 
       longDescription: "SCN wanted to digitalize their business and showcasing their products on a product web as well as having a mobile-friendly ui. In this project we used the e-commerce platform Litium with their out-of-the box storefront Litium Accelerator. My role has been to keep regular contact with the board and all project members, and well as manage the development team and customize the ui and implement the new product data model based on their requirements.", 
@@ -101,6 +106,7 @@ const projects = [
   {   
       id: "6", 
       title: "Uhip sportswear", 
+      date: "March 2020", 
       categories: "UI Design", 
       description: "UI re-design of Uhip e-commerce", 
       longDescription: "Small project to present a re-design of Uhip e-commerce website. My role was to create the sketches. We didn't win the implementation of the project, but I saw that they recently implemented a new design on their website. In my opinion, it's inspired by my sketches.", 
@@ -116,16 +122,6 @@ const projects = [
         link: UhipSketch, 
         linktext: "See new UI sketch"
       }]  
-  },
-  {   id: "7", 
-      title: "Sportlib", 
-      categories: "Graphic Design for OTT platform", 
-      description: "Sportlib is a video streaming platform for sports enthusiasts and needed image thumbnails for their videos.", 
-      longDescription: "My role included various tasks. From developing the streaming platform, ensuring all requirements were met for the app to be published on App store / Google play as well as creating content, mostly graphic thumbnails for videos.",
-      technologies: [
-          "Photoshop", "OZ streaming platform"
-      ], 
-      image: SportlibImage
   }]
 
 function ScrollToTop() {

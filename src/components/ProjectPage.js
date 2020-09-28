@@ -24,6 +24,7 @@ function ProjectPage({projects}) {
 return <animated.div style={props}><div className="project-page">
         <div className="container">
         <h1 style={{margin: '0'}}>{project.title}</h1>
+        {project.date ? <small><p>{project.date}</p></small> : null}
         <div>
             <p className="modal-subheading">{project.description}</p>
             <h3>PROJECT INFORMATION</h3>
