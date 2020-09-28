@@ -32,7 +32,8 @@ return <animated.div style={props}><div className="project-page">
             <div style={{display: "flex", flexWrap: "wrap"}}>
                 {project.technologies.map((technology, index)  => <div key={index} className="technologies-item" style={{padding: '0.5rem 1rem', marginRight: "1rem", marginBottom: "1rem", borderRadius: "9999px", background: "rgb(251, 243, 240)"}}>{technology}</div> )}
             </div>
-        {project.link ? <div><h3>LINK</h3><a href={project.link}>{project.linktext}</a></div> : null}
+
+        {project.links? <div className="project-links"><h3>LINKS</h3>{project.links.map((l, index)  => <a href={l.link}>{l.linktext}</a> )}</div> : null}
     </div>
         </div>
         <div id="nextProject"><div className="container">

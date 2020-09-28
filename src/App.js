@@ -20,6 +20,7 @@ import Navbar from "./NavBar"
 
 //images
 import UhipImage from "./images/Uhip-mockup.jpg"
+import UhipImageBefore from "./images/Uhip_startpage-before.jpg"
 import UhipSketch from "./images/Uhip-startpage-sketch.jpg"
 import OnboardingImage from "./images/Onboarding-mockup.jpg"
 import SWBImage from "./images/SWB-mockup.jpg"
@@ -37,8 +38,11 @@ const projects = [
       technologies: [
           "React.js", "GraphQL", "Hasura", "Auth0", "Tailwind css", "Netlify", "CI/CD", "Git", "WebHooks"
       ], 
-      image: OnboardingImage, link: "https://morpheus-tribe-onboarding.netlify.app/", 
-      linktext: "see website"
+      image: OnboardingImage,
+      links: [
+        { link: "https://morpheus-tribe-onboarding.netlify.app/", 
+          linktext: "see website"}
+      ] 
   },
   {
       id: "2", 
@@ -49,9 +53,11 @@ const projects = [
       technologies: [
       "ASP .NET Core", "Html", "Razor", "Less", "Javascript", "Umbraco CMS", "Adobe XD"
       ], 
-      image: JMImage, 
-      link: "https://jmathome.se/", 
-      linktext: "see website"
+      image: JMImage,
+      links: [{ 
+          link: "https://jmathome.se/", 
+          linktext: "see website" 
+        }]  
   },
   {   id: "3", 
       title: "Perpello", 
@@ -61,9 +67,11 @@ const projects = [
       technologies: [
           "ASP .NET Core", "Html", "Razor", "Less", "Litium CMS"
       ], 
-      image: PerpelloImage, 
-      link: "https://perpello.se/var-varld", 
-      linktext: "see company blog"
+      image: PerpelloImage,
+      links: [{ 
+        link: "https://perpello.se/var-varld", 
+        linktext: "see company blog"
+      }]   
   },
   {   id: "4", 
       title: "Swedish Warmblood Association", 
@@ -85,21 +93,29 @@ const projects = [
       "ASP .NET Core", "Html", "Razor", "Less", "C#", "Litium CMS", "Litium Accelerator", "Adobe XD", "Photography"
   ], 
   image: SCNImage,
-  link: "https://www.scnnordic.com/",
-  linktext: "go to website"
+  links: [{ 
+    link: "https://www.scnnordic.com/",
+    linktext: "go to website"
+  }] 
   },
   {   
       id: "6", 
       title: "Uhip sportswear", 
       categories: "UI Design", 
       description: "UI re-design of Uhip e-commerce", 
-      longDescription: "Small project to present a re-design of Uhip e-commerce website. My role was to create the sketches.", 
+      longDescription: "Small project to present a re-design of Uhip e-commerce website. My role was to create the sketches. We didn't win the implementation of the project, but I saw that they recently implemented a new design on their website. In my opinion, it's inspired by my sketches.", 
       technologies: [
           "Adobe XD"
       ], 
-      image: UhipImage, 
-      link: UhipSketch, 
-      linktext: "see sketch"
+      image: UhipImage,
+      links: [{ 
+        link: UhipImageBefore, 
+        linktext: "See before image"
+      },
+      { 
+        link: UhipSketch, 
+        linktext: "See new UI sketch"
+      }]  
   },
   {   id: "7", 
       title: "Sportlib", 

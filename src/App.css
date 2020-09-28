@@ -156,6 +156,10 @@ p,h4,h2,a {
   background: rgb(247, 232, 225);
   padding: 5rem 0;
 }
+.project-page .project-links a {
+  display: block;
+  padding-bottom: 1rem;
+}
 
 /* ABOUT PAGE */
 #about-page .about-info {
