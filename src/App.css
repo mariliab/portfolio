@@ -8,6 +8,20 @@ p,h4,h2,a {
   font-family: "Josefin Sans";
   color: #2f2724;
 }
+.primary-button-wrapper a {
+  border: 2px solid #2f2724;
+  color: #2f2724;
+  text-decoration: none;
+  font-weight: bold;
+  background: white;
+  padding: 1rem 2rem;
+  height: 3rem;
+  box-shadow: 5px 5px 0 0 #2f2724;
+  border-radius: 9999px;
+}
+.primary-button-wrapper a:hover {
+  background: rgb(247, 232, 225);
+}
 .container {
   max-width: 800px;
   margin: 0 auto;
@@ -145,6 +159,12 @@ p,h4,h2,a {
 #nextProject {
   text-align: right;
   background: rgb(247, 232, 225);
+}
+#nextProject .primary-button-wrapper a img {
+  margin-left: 0.5rem;
+  height: 1rem;
+  vertical-align: middle;
+  margin-bottom: 2px;
 }
 @media (min-width: 992px) {
   .project-page {

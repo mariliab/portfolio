@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 function Footer() {
     return <div id="contact" style={{background: "#fbf3f0", padding: "5rem 1rem 10rem 1rem", position: "relative"}}><h2 style={{paddingBottom: "1rem", fontSize: "300%", color: "#2f2724"}}>Say Hello!</h2><h3>

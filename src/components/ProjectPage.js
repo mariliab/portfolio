@@ -7,10 +7,10 @@ import {
     Link,
   } from "react-router-dom";
   import {useSpring, animated} from 'react-spring';
+  import arrowRight from "../images/arrow-right.svg"
 
 function ProjectPage({projects}) {
     const params = useParams();
-    const props = useSpring({opacity: 1, marginTop: '0', from: {opacity: 0, marginTop: '-10rem'}})
 
     let project;
     if(projects){
@@ -30,7 +30,9 @@ function getNextProject(){
     return nextProject;
 }
 
-return <animated.div style={props}><div className="project-page">
+const animationProps = useSpring({opacity: 1, marginLeft: '0', from: {opacity: 0, marginLeft: '-100%'}})
+
+return <animated.div style={animationProps}><div className="project-page">
     <div className="project-information-wrapper">
     <div className="project-image" style={{backgroundImage: `url(${project.image})`, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat"}}></div>
     <div className="project-information">
@@ -52,15 +54,12 @@ return <animated.div style={props}><div className="project-page">
     </div>
     </div>
         <div id="nextProject"><div className="container">
-            <Link to={`/projectpage/${getNextProject()}`} style={{
-                                color: "#2f2724", 
-                                boxShadow: "5px 5px 0 0 #edc7b6", 
-                                border: "1px solid", 
-                                borderRadius: "9999px", 
-                                padding: "1rem 2rem", 
-                                fontWeight: "bold", 
-                                textDecoration: "none"
-                            }} >Next project</Link>
+            <div className="primary-button-wrapper">
+                <Link to={`/projectpage/${getNextProject()}`}>
+                        Next project 
+                        <img src={arrowRight} alt="NExt project"></img>
+                </Link>
+            </div>
             </div>
         </div>
 </div></animated.div>

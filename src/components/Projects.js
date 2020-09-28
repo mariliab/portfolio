@@ -17,15 +17,9 @@ function ProjectItem({project}) {
                     <h4 style={{textTransform: "uppercase", marginTop: "1rem"}}>{project.categories}</h4>
                     <p>{project.description}</p>
                     <div style={{marginTop: "3rem", height: "3rem"}}>
-                    <Link to={`/projectpage/${project.id}`} id={project.id} project={project}    style={{
-                                color: "#2f2724", 
-                                boxShadow: "5px 5px 0 0 #edc7b6", 
-                                border: "1px solid", 
-                                borderRadius: "9999px", 
-                                padding: "1rem 2rem", 
-                                fontWeight: "bold", 
-                                textDecoration: "none"
-                            }} >Read more</Link>
+                    <div className="primary-button-wrapper">
+                    <Link to={`/projectpage/${project.id}`} id={project.id} project={project}>Read more</Link>
+                    </div>
                     </div>
                 </div>
             </div>
