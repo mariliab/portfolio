@@ -61,21 +61,26 @@ const projects = [
           linktext: "see website" 
         }]  
   },
-  {   id: "3", 
-      title: "Perpello",
-      date: "January 2018 - April 2020",  
-      categories: "Frontend development / UI design", 
-      description: "Perpello is a company focued on e-commerce and wanted to produce value creating content via an engaging blog.", 
-      longDescription: "My role has been to implement the new design of the website aswell as managing content such as updating and producing.", 
-      technologies: [
-          "ASP .NET Core", "Html", "Razor", "Less", "Litium CMS"
-      ], 
-      image: PerpelloImage,
-      links: [{ 
-        link: "https://perpello.se/var-varld", 
-        linktext: "see company blog"
-      }]   
-  },
+  {   
+    id: "3", 
+    title: "Uhip sportswear", 
+    date: "March 2020", 
+    categories: "UI Design", 
+    description: "UI re-design of Uhip e-commerce", 
+    longDescription: "Small project to present a re-design of Uhip e-commerce website. My role was to create the sketches. We didn't win the implementation of the project, but I saw that they recently implemented a new design on their website. In my opinion, it's inspired by my sketches.", 
+    technologies: [
+        "Adobe XD"
+    ], 
+    image: UhipImage,
+    links: [{ 
+      link: UhipImageBefore, 
+      linktext: "See before image"
+    },
+    { 
+      link: UhipSketch, 
+      linktext: "See new UI sketch"
+    }]  
+},
   {   id: "4", 
       title: "Swedish Warmblood Association", 
       date: "October 2019 - April 2020", 
@@ -103,25 +108,20 @@ const projects = [
     linktext: "go to website"
   }] 
   },
-  {   
-      id: "6", 
-      title: "Uhip sportswear", 
-      date: "March 2020", 
-      categories: "UI Design", 
-      description: "UI re-design of Uhip e-commerce", 
-      longDescription: "Small project to present a re-design of Uhip e-commerce website. My role was to create the sketches. We didn't win the implementation of the project, but I saw that they recently implemented a new design on their website. In my opinion, it's inspired by my sketches.", 
+  {   id: "6", 
+      title: "Perpello",
+      date: "January 2018 - April 2020",  
+      categories: "Frontend development / UI design", 
+      description: "Perpello is a company focued on e-commerce and wanted to produce value creating content via an engaging blog.", 
+      longDescription: "My role has been to implement the new design of the website aswell as managing content such as updating and producing.", 
       technologies: [
-          "Adobe XD"
+          "ASP .NET Core", "Html", "Razor", "Less", "Litium CMS"
       ], 
-      image: UhipImage,
+      image: PerpelloImage,
       links: [{ 
-        link: UhipImageBefore, 
-        linktext: "See before image"
-      },
-      { 
-        link: UhipSketch, 
-        linktext: "See new UI sketch"
-      }]  
+        link: "https://perpello.se/var-varld", 
+        linktext: "see company blog"
+      }]   
   }]
 
 function ScrollToTop() {
