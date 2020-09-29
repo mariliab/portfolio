@@ -218,6 +218,9 @@ p,h4,h2,a {
 #about-page .about-info {
   display: flex;
 }
+#about-page .about-info p {
+  font-size: 150%;
+}
 #about-page h1 {
   text-align: center;
 }  
