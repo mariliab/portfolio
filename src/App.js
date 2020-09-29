@@ -28,6 +28,7 @@ import SportlibImage from "./images/Sportlib-mockup.jpg"
 import PerpelloImage from "./images/Perpello-world-mockup.jpg"
 import JMImage from "./images/JMathome-mockup.jpg"
 import SCNImage from "./images/SCNNordic.jpeg"
+import BonavaImage from "./images/bonava-mockup.jpg"
 
 const projects = [
   {   id: "1", 
@@ -45,24 +46,8 @@ const projects = [
           linktext: "see website"}
       ] 
   },
-  {
-      id: "2", 
-      title: "JM@home",
-      date: "August 2018 - December 2019", 
-      categories: "Frontend development / UI design", 
-      description: "Maintenance development of JM@Home's exisitng platform.", 
-      longDescription: "JM@home is a daughter company of JM and in this project I was included in a small development team that managed the web. My role was to suggest and implement new webdesign of the platform and staircase screens.", 
-      technologies: [
-      "ASP .NET Core", "Html", "Razor", "Less", "Javascript", "Umbraco CMS", "Adobe XD"
-      ], 
-      image: JMImage,
-      links: [{ 
-          link: "https://jmathome.se/", 
-          linktext: "see website" 
-        }]  
-  },
   {   
-    id: "3", 
+    id: "2", 
     title: "Uhip sportswear", 
     date: "March 2020", 
     categories: "UI Design", 
@@ -81,7 +66,7 @@ const projects = [
       linktext: "See new UI sketch"
     }]  
 },
-  {   id: "4", 
+  {   id: "3", 
       title: "Swedish Warmblood Association", 
       date: "October 2019 - April 2020", 
       categories: "Frontend development / UX / UI Design", 
@@ -93,7 +78,7 @@ const projects = [
       image: SWBImage
   },
   {
-      id: "5", 
+      id: "4", 
       title: "SCN Nordic", 
       date: "May 2019 - September 2019", 
       categories: "Web development / Project management", 
@@ -108,6 +93,22 @@ const projects = [
     linktext: "go to website"
   }] 
   },
+  {
+    id: "5", 
+    title: "JM@home",
+    date: "August 2018 - December 2019", 
+    categories: "Frontend development / UI design", 
+    description: "Maintenance development of JM@Home's exisitng platform.", 
+    longDescription: "JM@home is a daughter company of JM and in this project I was included in a small development team that managed the web. My role was to suggest and implement new webdesign of the platform and staircase screens.", 
+    technologies: [
+    "ASP .NET Core", "Html", "Razor", "Less", "Javascript", "Umbraco CMS", "Adobe XD"
+    ], 
+    image: JMImage,
+    links: [{ 
+        link: "https://jmathome.se/", 
+        linktext: "see website" 
+      }]  
+},
   {   id: "6", 
       title: "Perpello",
       date: "January 2018 - April 2020",  
@@ -122,7 +123,18 @@ const projects = [
         link: "https://perpello.se/var-varld", 
         linktext: "see company blog"
       }]   
-  }]
+  },
+  {   id: "7", 
+  title: "Bonava",
+  date: "March 2018 - July 2018",  
+  categories: "Frontend development / UI design", 
+  description: "Implementing design of user authentication and authorization views and multilingual support.", 
+  longDescription: "Bonava is a nordic residential development company. This project goal was to implement user authentication and authorization to the public website so users could save projects of interest etc. My role has been to implement the new design of the website aswell as designing and implementing admin views for handling users and also implementing multilingual support.", 
+  technologies: [
+      "Html", "Razor", "C#", "Bootstrap", "Less", "ASP .NET Core", "Javascript", "JQuery"
+  ], 
+  image: BonavaImage  
+}]
 
 function ScrollToTop() {
     const { pathname } = useLocation();
